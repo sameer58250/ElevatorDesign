@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace ElevatorDesign
 {
-    class Program
+    interface ILift
     {
-        static void Main(string[] args)
-        {
-
-        }
+        void SelectFloor(Floor floor);
+        void OpenDoor();
+        void CloseDoor();
     }
 }

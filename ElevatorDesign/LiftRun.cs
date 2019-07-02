@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ElevatorDesign
@@ -32,12 +33,28 @@ namespace ElevatorDesign
         {
             IsGoingUp = true;
             IsGoingDown = false;
+            Thread.Sleep(5000);
+            for (int i = 0; i < FloorList.Count; i++)
+            {
+                if (FloorList[i].FloorNo > CurrentFloor.FloorNo && FloorList[i].IsSelected)
+                {
+                    Stop(FloorList[i]);
+                }
+            }
         }
 
         public void GoDown()
         {
             IsGoingUp = false;
             IsGoingDown = true;
+            Thread.Sleep(5000);
+            for (int i = FloorList.Count-1; i >=0; i--)
+            {
+                if (FloorList[i].FloorNo < CurrentFloor.FloorNo && FloorList[i].IsSelected)
+                {
+                    Stop(FloorList[i]);
+                }
+            }
         }
 
 

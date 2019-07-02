@@ -43,9 +43,11 @@
   <ItemGroup>
     <Compile Include="DataModal.cs" />
     <Compile Include="Floor.cs" />
+    <Compile Include="ILift.cs" />
     <Compile Include="ILiftDoor.cs" />
     <Compile Include="ILiftFloor.cs" />
     <Compile Include="ILiftRun.cs" />
+    <Compile Include="Lift.cs" />
     <Compile Include="LiftDoor.cs" />
     <Compile Include="LiftFloor.cs" />
     <Compile Include="LiftRun.cs" />

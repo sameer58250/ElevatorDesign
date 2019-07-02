@@ -38,6 +38,7 @@ namespace ElevatorDesign
                 if (floor.FloorNo == liftData.ListOfFloor[i].FloorNo && liftData.ListOfFloor[i].IsActive)
                     liftData.ListOfFloor[i].IsDown = DownOrUp;
             }
+            //logic to decide which lift will arrive
         }
     }
 }
