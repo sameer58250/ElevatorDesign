@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace ElevatorDesign
 {
-    class LiftRun:ILiftRun
+    class LiftRun: ILiftRun
     {
-        bool IsStopped { get; set; }
-        bool IsDoorOpen{get;set;}
-        List<Floor> FloorList;
-        bool IsGoingUp { get; set; }
-        bool IsGoingDown { get; set; }
-        Floor CurrentFloor { get; set; }
-        int CurrentWeight { get; set; }
+        public bool IsStopped { get; set; }
+        public bool IsDoorOpen {get;set;}
+        public List<Floor> FloorList { get; set; }
+        public bool IsGoingUp { get; set; }
+        public bool IsGoingDown { get; set; }
+        public Floor CurrentFloor { get; set; }
+        public int CurrentWeight { get; set; }
         DataModal liftData;
 
         public LiftRun(List<Floor> floorList)
@@ -56,56 +56,6 @@ namespace ElevatorDesign
         {
             bool res = false; ;
             return res;
-        }
-
-        bool ILiftRun.IsStopped()
-        {
-            return IsStopped;
-        }
-
-        bool ILiftRun.IsDoorOpen()
-        {
-            return IsDoorOpen;
-        }
-
-        public List<Floor> getFloorList()
-        {
-            return FloorList;
-        }
-
-        bool ILiftRun.IsGoingUp()
-        {
-            return IsGoingUp;
-        }
-
-        bool ILiftRun.IsGoingDown()
-        {
-            return IsGoingDown;
-        }
-
-        Floor ILiftRun.CurrentFloor()
-        {
-            return CurrentFloor;
-        }
-
-        int ILiftRun.CurrentWeight()
-        {
-            return CurrentWeight;
-        }
-
-        public void OpenDoor()
-        {
-            IsDoorOpen = true;
-        }
-
-        public void CloseDoor()
-        {
-            IsDoorOpen = false;
-        }
-
-        public void setCurrentFloor(Floor floor)
-        {
-            CurrentFloor = floor;
         }
     }
 }

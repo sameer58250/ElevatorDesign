@@ -8,16 +8,13 @@ namespace ElevatorDesign
 {
     public interface ILiftRun
     {
-        bool IsStopped();
-        bool IsDoorOpen();
-        List<Floor> getFloorList();
-        bool IsGoingUp();
-        bool IsGoingDown();
-        Floor CurrentFloor();
-        int CurrentWeight();
-        void setCurrentFloor(Floor floor);
-        void OpenDoor();
-        void CloseDoor();
+        bool IsStopped { get; set; }
+        bool IsDoorOpen { get; set; }
+        List<Floor> FloorList { get; set; }
+        bool IsGoingUp { get; set; }
+        bool IsGoingDown { get; set; }
+        Floor CurrentFloor { get; set; }
+        int CurrentWeight { get; set; }
         void GoUp();
         void GoDown();
         void Stop(Floor floor);

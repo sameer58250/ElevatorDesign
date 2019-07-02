@@ -16,44 +16,44 @@ namespace ElevatorDesign
         }
         public void OpenDoor()
         {
-            if (Lift.IsStopped())
-                Lift.OpenDoor();
+            if (Lift.IsStopped)
+                Lift.IsDoorOpen = true; ;
             Thread.Sleep(1000);
         }
 
         public void CloseDoor()
         {
-            Lift.CloseDoor();
-            for (int i = 0; i < Lift.getFloorList().Count; i++)
+            Lift.IsDoorOpen = false;
+            for (int i = 0; i < Lift.FloorList.Count; i++)
             {
-                if (Lift.IsGoingUp() && Lift.getFloorList()[i].FloorNo > Lift.CurrentFloor().FloorNo && Lift.getFloorList()[i].IsSelected)
+                if (Lift.IsGoingUp && Lift.FloorList[i].FloorNo > Lift.CurrentFloor.FloorNo && Lift.FloorList[i].IsSelected)
                 {
-                    Lift.setCurrentFloor(Lift.getFloorList()[i]);
+                    Lift.CurrentFloor=Lift.FloorList[i];
                     Lift.GoUp();
                     break;
                 }
-                else if (Lift.IsGoingDown() && Lift.getFloorList()[i].FloorNo < Lift.CurrentFloor().FloorNo && Lift.getFloorList()[i].IsSelected)
+                else if (Lift.IsGoingDown && Lift.FloorList[i].FloorNo < Lift.CurrentFloor.FloorNo && Lift.FloorList[i].IsSelected)
                 {
-                    Lift.setCurrentFloor(Lift.getFloorList()[i]);
+                    Lift.CurrentFloor = Lift.FloorList[i];
                     Lift.GoDown();
                     break;
                 }
                 else
                 {
-                    if (Lift.getFloorList()[i].IsSelected && Lift.getFloorList()[i].FloorNo > Lift.CurrentFloor().FloorNo)
+                    if (Lift.FloorList[i].IsSelected && Lift.FloorList[i].FloorNo > Lift.CurrentFloor.FloorNo)
                     {
-                        Lift.setCurrentFloor(Lift.getFloorList()[i]);
+                        Lift.CurrentFloor = Lift.FloorList[i];
                         Lift.GoUp();
                         break;
                     }
-                    else if (Lift.getFloorList()[i].IsSelected && Lift.getFloorList()[i].FloorNo < Lift.CurrentFloor().FloorNo)
+                    else if (Lift.FloorList[i].IsSelected && Lift.FloorList[i].FloorNo < Lift.CurrentFloor.FloorNo)
                     {
-                        Lift.setCurrentFloor(Lift.getFloorList()[i]);
+                        Lift.CurrentFloor = Lift.FloorList[i];
                         Lift.GoDown();
                         break;
                     }
                     else
-                        Lift.Stop(Lift.CurrentFloor());
+                        Lift.Stop(Lift.CurrentFloor);
                 }
             }
         }

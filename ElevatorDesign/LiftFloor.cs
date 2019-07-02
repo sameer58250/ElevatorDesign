@@ -16,18 +16,18 @@ namespace ElevatorDesign
         }
 
         public void SelectFloorInLift(Floor floor){
-            for (int i = 0; i < Lift.getFloorList().Count; i++)
+            for (int i = 0; i < Lift.FloorList.Count; i++)
             {
-                if (floor.FloorNo == Lift.getFloorList()[i].FloorNo && Lift.getFloorList()[i].IsActive)
-                    Lift.getFloorList()[i].IsSelected = true;
+                if (floor.FloorNo == Lift.FloorList[i].FloorNo && Lift.FloorList[i].IsActive)
+                    Lift.FloorList[i].IsSelected = true;
             }
         }
 
         public void DeselectFloorInLift(Floor floor){
-            for (int i = 0; i < Lift.getFloorList().Count; i++)
+            for (int i = 0; i < Lift.FloorList.Count; i++)
             {
-                if (floor.FloorNo == Lift.getFloorList()[i].FloorNo && Lift.getFloorList()[i].IsActive && Lift.getFloorList()[i].IsSelected)
-                    Lift.getFloorList()[i].IsSelected = false;
+                if (floor.FloorNo == Lift.FloorList[i].FloorNo && Lift.FloorList[i].IsActive && Lift.FloorList[i].IsSelected)
+                    Lift.FloorList[i].IsSelected = false;
             }
         }
     }
