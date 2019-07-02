@@ -1,0 +1,6 @@
+C:\Users\sameer_pc\Desktop\Visual Studio\ElevatorDesign\ElevatorDesign\bin\Debug\ElevatorDesign.exe.config
+C:\Users\sameer_pc\Desktop\Visual Studio\ElevatorDesign\ElevatorDesign\obj\Debug\ElevatorDesign.csprojResolveAssemblyReference.cache
+C:\Users\sameer_pc\Desktop\Visual Studio\ElevatorDesign\ElevatorDesign\bin\Debug\ElevatorDesign.exe
+C:\Users\sameer_pc\Desktop\Visual Studio\ElevatorDesign\ElevatorDesign\bin\Debug\ElevatorDesign.pdb
+C:\Users\sameer_pc\Desktop\Visual Studio\ElevatorDesign\ElevatorDesign\obj\Debug\ElevatorDesign.exe
+C:\Users\sameer_pc\Desktop\Visual Studio\ElevatorDesign\ElevatorDesign\obj\Debug\ElevatorDesign.pdb
